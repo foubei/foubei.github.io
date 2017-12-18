@@ -1,1 +1,5 @@
 !.gitignore
+.eslintcache
+.stylelintcache
+dist/**/*
+node_modules/**/*
