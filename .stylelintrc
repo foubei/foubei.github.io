@@ -1,0 +1,72 @@
+{
+  "extends": [
+    "stylelint-config-standard"
+  ],
+  "plugins": [
+    "stylelint-order",
+    "stylelint-selector-bem-pattern"
+  ],
+  rules: {
+    'at-rule-no-unknown': [
+      true,
+      {
+        ignoreAtRules: [
+          'alias',
+          'util',
+        ],
+      },
+    ],
+    'at-rule-no-vendor-prefix': true,
+    'media-feature-name-no-vendor-prefix': true,
+    'order/order': [
+      'custom-properties',
+      'dollar-variables',
+      'at-variables',
+      'declarations',
+      'rules',
+      'at-rules',
+    ],
+    'order/properties-alphabetical-order': true,
+    'plugin/selector-bem-pattern': {
+      preset: 'suit',
+    },
+    'property-no-unknown': [
+      true,
+      {
+        ignoreProperties:
+          [
+            'font-path',
+            'font-range',
+          ],
+      },
+    ],
+    'property-no-vendor-prefix': true,
+    'selector-no-vendor-prefix': true,
+    'selector-pseudo-class-no-unknown': [
+      true,
+      {
+        ignorePseudoClasses: [
+          'at-least',
+          'at-most',
+          'between',
+          'class-contains',
+          'class-ends-with',
+          'class-starts-with',
+          'exactly',
+          'hocus',
+          'pocus',
+        ],
+      },
+    ],
+    'selector-pseudo-element-no-unknown': [
+      true,
+      {
+        ignorePseudoElements: [
+          'track',
+          'thumb',
+        ],
+      },
+    ],
+    'value-no-vendor-prefix': true,
+  }
+}
