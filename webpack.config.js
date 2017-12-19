@@ -24,14 +24,14 @@ module.exports = {
           cache: true,
         },
       },
-      // {
-      //   test: /\.js$/,
-      //   exclude: /node_modules/,
-      //   include: [
-      //     path.resolve(__dirname, 'src/')
-      //   ],
-      //   loader: 'babel-loader',
-      // },
+      {
+        test: /\.js$/,
+        exclude: /node_modules/,
+        include: [
+          path.resolve(__dirname, 'src/'),
+        ],
+        loader: 'babel-loader',
+      },
       {
         test: /\.scss$/,
         exclude: [
