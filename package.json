@@ -39,12 +39,12 @@
     "webpack": "^3.10.0"
   },
   "scripts": {
-    "build": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=production node_modules/webpack/bin/webpack.js",
-    "debug": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js",
-    "lint--css": "node_modules/stylelint/bin/stylelint.js src/scss/**/* --cache=true --ignore-disables --syntax scss",
-    "lint--css-fix": "node_modules/stylelint/bin/stylelint.js src/scss/**/* --cache=true --fix --ignore-disables --syntax scss",
-    "lint--js": "node_modules/eslint/bin/eslint.js src/js/**/* --cache=true --no-inline-config",
-    "lint--js-fix": "node_modules/eslint/bin/eslint.js src/js/**/* --cache=true --fix --no-inline-config"
+    "build": "node_modules/webpack/bin/webpack.js --env.NODE_ENV=production --progress",
+    "debug": "node_modules/cross-env/dist/bin/cross-env.js NODE_ENV=development node_modules/webpack/bin/webpack.js --env.NODE_ENV=development --progress",
+    "lint-css": "node_modules/stylelint/bin/stylelint.js src/scss/**/* --cache=true --ignore-disables --syntax scss",
+    "lint-css-fix": "node_modules/stylelint/bin/stylelint.js src/scss/**/* --cache=true --fix --ignore-disables --syntax scss",
+    "lint-js": "node_modules/eslint/bin/eslint.js src/js/**/* --cache=true --no-inline-config",
+    "lint-js-fix": "node_modules/eslint/bin/eslint.js src/js/**/* --cache=true --fix --no-inline-config"
   },
   "repository": {
     "type": "ssh",
